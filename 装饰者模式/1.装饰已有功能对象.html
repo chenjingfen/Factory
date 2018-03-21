@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰已有功能对象</title>
+</head>
+<body>
+<script>
+    //装饰者
+    var decorator= function (input,fn) {
+        //获取事件源
+        var input=document.getElementById(input);
+        if(typeof input.onclick==='function'){
+            //缓存事件源原有回调函数
+            var oldClickFn=input.onclick;
+            input.onclick=function(){
+                //事件源原有回调函数
+                oldClickFn();
+                //执行事件源新增回调函数
+                fn();
+            }
+        }else {
+            //事件源未绑定事件，直接为事件源添加新增回调函数
+            input.onclick=fn;
+        }
+    }
+
+    window.onload=function(){
+        //具体使用
+        decorator('tel_input',function(){
+            //新功能
+        })
+    }
+</script>
+</body>
+</html>

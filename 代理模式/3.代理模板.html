@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模板 X域被代理页面A</title>
+</head>
+<body>
+<script>
+    function callback(data){
+        console.log('成功接收数据',data);
+    }
+</script>
+<iframe name="proxyIframe" id="proxyIframe" src="">
+
+</iframe>
+<form action="4.代理模板.html" method="post" target="proxyIframe">
+    <input type="text" name="callback" value="callback">
+    <input type="text" name="proxy" value="4.代理模板.html">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

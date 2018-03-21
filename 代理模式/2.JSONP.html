@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP</title>
+</head>
+<body>
+<!--前端浏览器页面-->
+<script>
+    //回调函数，打印出请求数据与响应数据
+    function jsonpCallBack(res, req) {
+        console.log(res, req);
+    }
+</script>
+<!--
+<script type="text/javascript" src="http://localhost/test/jsonp.php?"></script>-->
+
+
+<table border="2" bordercolor="black" width="300" cellspacing="0" cellpadding="5">
+
+    <thead>
+    <tr>
+        <th >序号</th>
+        <th >类型</th>
+        <th >进度</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div>
+
+    <tr>
+        <td rowspan="3">1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr>
+        <!--<td>2.1</td>-->
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+    <tr>
+        <!--<td>3.1</td>-->
+        <td>3.2</td>
+        <td>3.3</td>
+    </tr>
+    </div>
+
+    <div>
+    <tr>
+        <td rowspan="3">1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr>
+        <!--<td>2.1</td>-->
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+    <tr>
+        <!--<td>3.1</td>-->
+        <td>3.2</td>
+        <td>3.3</td>
+    </tr>
+    </div>
+    </tbody>
+
+</table>
+</body>
+</html>

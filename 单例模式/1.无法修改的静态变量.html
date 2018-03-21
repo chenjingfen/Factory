@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无法修改的静态变量</title>
+</head>
+<body>
+<script>
+    var Conf=(function(){
+        //私有变量
+        var conf={
+            MAX_NUM:100,
+            MIN_NUM:1,
+            CUONT:1000
+        }
+        //返回取值器对象
+        return {
+            //取值器方法
+            get:function(name){
+                return conf[name]?conf[name]:null;
+            }
+        }
+    })();
+
+
+    //测试案例
+    window.onload=function(){
+        var count=Conf.get('MAX_NUM');
+        console.log(count);
+    }
+</script>
+</body>
+</html>
